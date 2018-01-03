@@ -1,0 +1,41 @@
+{
+  "name": "ts-men-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startdev": "tsc && node ./build/index.js",
+    "clean": "rimraf build/",
+    "tsc-dev": "npm run clean && tsc -w",
+    "server-dev": "nodemon ./build/index.js",
+    "client-dev": "cd angular-src/ && ng serve",
+    "start-dev": "concurrently --names \"TSC, NODE, NG\" -c \"blue,green,pink\" \"npm run tsc-dev\" \"npm run server-dev\" \"npm run client-dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^5.0.0-rc0",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "swagger-jsdoc": "^1.9.7",
+    "swagger-ui-express": "^2.0.13"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.1",
+    "@types/express": "^4.11.0",
+    "@types/jsonwebtoken": "^7.2.5",
+    "@types/mongoose": "^4.7.31",
+    "@types/node": "^8.5.2",
+    "@types/passport": "^0.4.2",
+    "@types/passport-jwt": "^3.0.0",
+    "typescript": "^2.6.2"
+  }
+}
